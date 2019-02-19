@@ -26,8 +26,8 @@ Currently under review at SIGCOMM 2019
 ## Installation
 On a linux machine:
 ```angular2html
-tar -zxvf 5G_resource_assignment_generator.tar.gz
-cd 5G_resource_allocation_generator
+tar -zxvf 5GResourceAssignmentGenerator.zip
+cd 5GResourceAssignmentGenerator
 cat requirements.txt | xargs -n 1 -L 1 pip install
 python setup.py install
 ```
