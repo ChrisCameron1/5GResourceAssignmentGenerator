@@ -1,4 +1,4 @@
-# Problem Generator for 5G Network Resource Allocation
+# Problem Generator for 5G Network Resource Assignment
 
 Copyright (C) 2018-2019 Huawei Technologies Ltd.
 
@@ -45,11 +45,9 @@ If you found a bug or have a question, please email cchris13@cs.ubc.ca
 ## Overview
 
 1. Problem Summary
-1. Directory Structure
-1. Description of default setting
-2. JSON Encoding
-3. Programmatically generating problems
-4. Parameters for customizing on command line
+2. Directory Structure
+3. Quickstart
+4. JSON Encoding
 5. TODOs
 
 ## Problem Summary
@@ -86,11 +84,11 @@ What defines problem:
 This is the criteria for a valid allocation:
 
 1. Each virtualized function needs to be allocated enough resources (e.g., CPU, MEM, I/O) on servers
-1. Resource constraints on servers cannot be exceeded
-1. Virtualized functions can be split across servers as long as the resources allocated are in the same proportion within every server (e.g., if function requires 2GB memory and 2 CPUs, we could allocate 1GB and 1 CPU to two different servers but not 2 CPUs to one server and 2 GB to another )
-1. Bandwidth constraints between data centres cannot be exceeded
-1. A RemoteRadioHead can be connected to at most one server (PhyProcessor) but server can connect to many remote radio heads
-1. Some service chains have a delay constraint. If data jumps between servers along a service chain, a delay cost is incurred. For any chunk of data passing through service chain, the total sum of delays must not exceed some constant.
+2. Resource constraints on servers cannot be exceeded
+3. Virtualized functions can be split across servers as long as the resources allocated are in the same proportion within every server (e.g., if function requires 2GB memory and 2 CPUs, we could allocate 1GB and 1 CPU to two different servers but not 2 CPUs to one server and 2 GB to another )
+4. Bandwidth constraints between data centres cannot be exceeded
+5. A RemoteRadioHead can be connected to at most one server (PhyProcessor) but server can connect to many remote radio heads
+6. Some service chains have a delay constraint. If data jumps between servers along a service chain, a delay cost is incurred. For any chunk of data passing through service chain, the total sum of delays must not exceed some constant.
 
 
 ## Directory Structure
