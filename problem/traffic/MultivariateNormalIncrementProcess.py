@@ -78,7 +78,7 @@ class MultivariateNormalIncrementProcess(TrafficDistribution):
             # Resource requirements per bitrate proportion
             slice_resource_requirement = slice.get_resource_requirements_rate(resource=constraining_resource)
             #print("Slice resource requirement: %s: %s" % (slice_name, slice_resource_requirement))
-            resource_requirements = slice_resource_requirement * proportions[slice_name]
+            resource_requirements = slice_resource_requirement * proportions[slice_name] * slice.get_max_resource_requirements_rate(resource=constraining_resource)
             slice_requirements[slice_name] = resource_requirements
             slice_resources_sum += resource_requirements
 

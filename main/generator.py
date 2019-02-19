@@ -413,7 +413,7 @@ def parse_command_line_args(args):
                         help='Variance of on/off distribution as a function of mean traffic. List of [slice_name]:[proportion] pairs.')
     parser.add_argument('--remote_radio_head_split', type=str, default='random_partition',
                         help='Partition of traffic over radioheads. By default traffic is randomly partitioned over radio heads. There are currently no other options implemented.')
-    parser.add_argument('--approx_network_load', type=float, default=0.5,
+    parser.add_argument('--approx_network_load', type=float, default=0.8,
                         help='Approx proportion of network loaded for optimal allocation')
     parser.add_argument('--time_intervals', type=int, default=3,
                         help='Number of time intervals samples over')

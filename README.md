@@ -39,7 +39,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 ## Contact 
 
-5G Resource Allocation Generator is developed at the University of British Columbia in partnership with Huawei Technologies Ltd.
+5G Resource Assignment Generator is developed at the University of British Columbia in partnership with Huawei Technologies Ltd.
 If you found a bug or have a question, please email cchris13@cs.ubc.ca
 
 ## Overview
@@ -119,18 +119,18 @@ To generate some toy problems, type from the root directory:
 ```angular2html
 python ./main/generator.py --num_datacentres 2 --racks_per_datacentre_range 2 2 --servers_per_rack_range 4 4 --name "5G_toy"
 ```
-This will create problems `5G_toy_1.json`, ..., `5G_toy_12.json` allocation problems in ./instances
+This will create problems `5G_toy_0.json`, ..., `5G_toy_11.json` allocation problems in ./instances
 with 2 data centres, 2 racks per data centre, and 4 servers per rack.
 
 For a full list of generator parameters, type
 ```angular2html
-python generator.py --help
+python ./main/generator.py --help
 ```
 
 To build a MIP optimization from one of these problems, execute:
 
 ```angular2html
-python ./main/mip_encoding.py --problem ./instances/5gAllocation_0.json
+python ./main/mip_encoding.py --problem ./instances/5G_toy_0.json
 ```
 This will store .lp file representing --problem into ./instances/5gAllocation_0.lp. The .lp can then be 
 solved with a MIP solvers of your choice.
